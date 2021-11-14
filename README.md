@@ -1,6 +1,6 @@
 # lending
 
-A new Flutter project.
+A Lending Application project for Archer and Vince.
 
 ## Getting Started
 
