@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
+import 'package:lending/screens/register.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -209,7 +210,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               // Navigator.push(
                               //   context,
                               //   MaterialPageRoute(
-                              //       builder: (context) => RegisterPatient(
+                              //       builder: (context) => ForgotPassword(
                               //             auth: auth,
                               //             currentUser: auth.currentUser,
                               //           )),
@@ -235,7 +236,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               Text(
                                 'Don\'t have an account yet? ',
                                 style: TextStyle(
-                                  color: const Color(0xFF000000),
+                                  color: const Color(0xFFCE8712),
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
                                   fontSize: height * 0.016,
@@ -244,14 +245,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               InkWell(
                                 onTap: () {
-                                  // Navigator.push(
-                                  //   context,
-                                  //   MaterialPageRoute(
-                                  //       builder: (context) => ForgotPassword(
-                                  //             auth: auth,
-                                  //             currentUser: auth.currentUser,
-                                  //           )),
-                                  // );
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const RegisterScreen()),
+                                  );
                                 },
                                 child: Text(
                                   'Sign up now',
