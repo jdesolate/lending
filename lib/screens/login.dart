@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
+import 'package:lending/screens/home.dart';
 import 'package:lending/screens/register.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -129,6 +130,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           ElevatedButton(
                             onPressed: () async {
+                              Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const HomeScreen()),
+                                  );
                               // try {
                               //   await auth
                               //       .signInWithEmailAndPassword(
