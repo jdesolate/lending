@@ -30,7 +30,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             horizontal: width * 0.10,
           ),
           decoration:
-              BoxDecoration(color: const Color(0xFFFFEFD4).withOpacity(0.5)),
+              BoxDecoration(color: const Color(0xFFF6E6CE).withOpacity(0.5)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -214,7 +214,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               // }
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: const Color(0xFF14213D),
+                              primary: const Color(0xFFECA82E),
                               fixedSize: Size(
                                 width * 0.45,
                                 height * 0.060,
@@ -226,7 +226,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             child: Text(
                               'Sign Up',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
                                 fontSize: height * 0.018,
@@ -243,7 +243,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               Text(
                                 'Already have an account? ',
                                 style: TextStyle(
-                                  color: const Color(0xFFCE8712),
+                                  color: const Color(0xFF101118),
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
                                   fontSize: height * 0.016,
@@ -262,7 +262,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 child: Text(
                                   'Sign in now',
                                   style: TextStyle(
-                                    color: const Color(0xFF14213D),
+                                    color: const Color(0xFF96006C),
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w600,
                                     fontSize: height * 0.016,

@@ -34,9 +34,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return SafeArea(
       child: Scaffold(
-        body: SizedBox(
+        body: Container(
           width: width,
           height: height,
+          color: const Color(0xFFF6E6CE),
           // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 95),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

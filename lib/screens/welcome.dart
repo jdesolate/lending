@@ -14,7 +14,7 @@ class WelcomeScreen extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration:
-            BoxDecoration(color: const Color(0xFFFFEFD4).withOpacity(0.5)),
+            BoxDecoration(color: const Color(0xFFFDFBF7).withOpacity(0.5)),
         child: Padding(
           padding: EdgeInsets.symmetric(
             vertical: height * 0.30,
@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                               builder: (context) => const LoginScreen()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFF14213D),
+                      primary: const Color(0xFF101118),
                       fixedSize: Size(
                         width * 0.65,
                         height * 0.060,
@@ -97,7 +97,7 @@ class WelcomeScreen extends StatelessWidget {
                               builder: (context) => const RegisterScreen()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFFE5E5E5),
+                      primary: const Color(0xFFECA82E),
                       fixedSize: Size(
                         width * 0.65,
                         height * 0.060,
