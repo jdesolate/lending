@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lending/screens/homepage/homepage.dart';
+import 'package:lending/screens/login.dart';
+import 'package:lending/screens/profilepage/profilepage.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,28 +15,23 @@ class _HomeScreenState extends State<HomeScreen> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    HomePage(optionStyle: optionStyle),
+    ProfilePage(optionStyle: optionStyle),
+    LoggingOut(optionStyle: optionStyle),
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+    if (index == 2) {
+      Future.delayed(const Duration(milliseconds: 1000), () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const LoginScreen()),
+        );
+      });
+    }
   }
 
   @override
@@ -66,6 +64,23 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: _onItemTapped,
         ),
       ),
+    );
+  }
+}
+
+class LoggingOut extends StatelessWidget {
+  const LoggingOut({
+    Key? key,
+    required this.optionStyle,
+  }) : super(key: key);
+
+  final TextStyle optionStyle;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'Logging Out....',
+      style: optionStyle,
     );
   }
 }

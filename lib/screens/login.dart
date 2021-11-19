@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
+import 'package:lending/screens/forgotpass.dart';
 import 'package:lending/screens/home.dart';
 import 'package:lending/screens/register.dart';
 
@@ -131,11 +132,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           ElevatedButton(
                             onPressed: () async {
                               Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const HomeScreen()),
-                                  );
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const HomeScreen()),
+                              );
                               // try {
                               //   await auth
                               //       .signInWithEmailAndPassword(
@@ -214,14 +214,14 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           InkWell(
                             onTap: () {
-                              // Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(
-                              //       builder: (context) => ForgotPassword(
-                              //             auth: auth,
-                              //             currentUser: auth.currentUser,
-                              //           )),
-                              // );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ForgotPassword(
+                                        // auth: auth,
+                                        // currentUser: auth.currentUser,
+                                        )),
+                              );
                             },
                             child: Text(
                               'Forgot Password?',
