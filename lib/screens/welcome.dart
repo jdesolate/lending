@@ -13,8 +13,7 @@ class WelcomeScreen extends StatelessWidget {
 
     return SafeArea(
       child: Container(
-        decoration:
-            BoxDecoration(color: const Color(0xFFFDFBF7).withOpacity(0.5)),
+        decoration: BoxDecoration(color: primaryColor1.withOpacity(0.5)),
         child: Padding(
           padding: EdgeInsets.symmetric(
             vertical: height * 0.30,
@@ -66,7 +65,7 @@ class WelcomeScreen extends StatelessWidget {
                               builder: (context) => const LoginScreen()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFF101118),
+                      primary: primaryColor3,
                       fixedSize: Size(
                         width * 0.65,
                         height * 0.060,
@@ -78,7 +77,7 @@ class WelcomeScreen extends StatelessWidget {
                     child: Text(
                       'Log In',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: primaryColor1,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w300,
                         fontSize: height * 0.022,
@@ -97,7 +96,7 @@ class WelcomeScreen extends StatelessWidget {
                               builder: (context) => const RegisterScreen()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: const Color(0xFFECA82E),
+                      primary: accentColor1,
                       fixedSize: Size(
                         width * 0.65,
                         height * 0.060,
@@ -109,9 +108,9 @@ class WelcomeScreen extends StatelessWidget {
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: primaryColor3,
                         fontFamily: 'Inter',
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w400,
                         fontSize: height * 0.022,
                         decoration: TextDecoration.none,
                       ),

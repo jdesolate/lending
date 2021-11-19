@@ -29,8 +29,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             vertical: height * 0.18,
             horizontal: width * 0.10,
           ),
-          decoration:
-              BoxDecoration(color: const Color(0xFFF6E6CE).withOpacity(0.5)),
+          decoration: const BoxDecoration(color: primaryColor2),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -59,16 +58,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 height: height * 0.48,
                 width: width * 0.85,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: primaryColor1,
                   borderRadius: BorderRadius.circular(25.0),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.25),
+                      color: primaryColor3.withOpacity(0.25),
                       blurRadius: 5,
                       offset: const Offset(3, 4), // changes position of shadow
                     ),
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.25),
+                      color: primaryColor3.withOpacity(0.25),
                       blurRadius: 5,
                       offset: const Offset(3, 4), // changes position of shadow
                     ),
@@ -91,7 +90,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             decoration: const InputDecoration(
                               icon: Icon(
                                 Icons.person,
-                                color: Colors.black,
+                                color: primaryColor3,
                               ),
                               hintText: 'Full Name',
                             ),
@@ -103,8 +102,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             controller: emailController,
                             decoration: const InputDecoration(
                               icon: Icon(
-                                Icons.person,
-                                color: Colors.black,
+                                Icons.mail,
+                                color: primaryColor3,
                               ),
                               hintText: 'Email',
                             ),
@@ -119,7 +118,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             decoration: InputDecoration(
                               icon: const Icon(
                                 Icons.lock,
-                                color: Colors.black,
+                                color: primaryColor3,
                               ),
                               hintText: 'Password',
                               suffixIcon: GestureDetector(
@@ -146,7 +145,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             decoration: const InputDecoration(
                               icon: Icon(
                                 Icons.lock,
-                                color: Colors.black,
+                                color: primaryColor3,
                               ),
                               hintText: 'Confirm Password',
                             ),
@@ -214,7 +213,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               // }
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: const Color(0xFFECA82E),
+                              primary: accentColor1,
                               fixedSize: Size(
                                 width * 0.45,
                                 height * 0.060,
@@ -226,7 +225,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             child: Text(
                               'Sign Up',
                               style: TextStyle(
-                                color: Colors.black,
+                                color: primaryColor3,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
                                 fontSize: height * 0.018,
@@ -243,7 +242,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               Text(
                                 'Already have an account? ',
                                 style: TextStyle(
-                                  color: const Color(0xFF101118),
+                                  color: primaryColor3,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
                                   fontSize: height * 0.016,
@@ -262,7 +261,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 child: Text(
                                   'Sign in now',
                                   style: TextStyle(
-                                    color: const Color(0xFF96006C),
+                                    color: accentColor2,
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w600,
                                     fontSize: height * 0.016,

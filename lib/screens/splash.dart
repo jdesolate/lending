@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lending/constants.dart';
 import 'package:lending/screens/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -37,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Container(
           width: width,
           height: height,
-          color: const Color(0xFFF6E6CE),
+          color: primaryColor2,
           // padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 95),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -57,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text("Lending",
-                      style: _titleTextStyle.copyWith(color: Colors.black)),
+                      style: _titleTextStyle.copyWith(color: primaryColor3)),
                 ],
               ),
             ],

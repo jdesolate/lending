@@ -29,8 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
             vertical: height * 0.18,
             horizontal: width * 0.10,
           ),
-          decoration:
-              BoxDecoration(color: const Color(0xFFF6E6CE).withOpacity(0.5)),
+          decoration: const BoxDecoration(color: primaryColor2),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -58,16 +57,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: height * 0.48,
                 width: width * 0.85,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: primaryColor1,
                   borderRadius: BorderRadius.circular(25.0),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.25),
+                      color: primaryColor3.withOpacity(0.25),
                       blurRadius: 5,
                       offset: const Offset(3, 4), // changes position of shadow
                     ),
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.25),
+                      color: primaryColor3.withOpacity(0.25),
                       blurRadius: 5,
                       offset: const Offset(3, 4), // changes position of shadow
                     ),
@@ -89,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             decoration: const InputDecoration(
                               icon: Icon(
                                 Icons.person,
-                                color: Colors.black,
+                                color: primaryColor3,
                               ),
                               hintText: 'Username',
                             ),
@@ -104,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             decoration: InputDecoration(
                               icon: const Icon(
                                 Icons.lock,
-                                color: Colors.black,
+                                color: primaryColor3,
                               ),
                               hintText: 'Password',
                               suffixIcon: GestureDetector(
@@ -189,7 +188,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               // }
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: const Color(0xFF101118),
+                              primary: primaryColor3,
                               fixedSize: Size(
                                 width * 0.45,
                                 height * 0.060,
@@ -201,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               'Login',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: primaryColor1,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
                                 fontSize: height * 0.018,
@@ -226,7 +225,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               'Forgot Password?',
                               style: TextStyle(
-                                color: const Color(0xFF14213D),
+                                color: secondaryColor,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
                                 fontSize: height * 0.017,
@@ -243,7 +242,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               Text(
                                 'Don\'t have an account yet? ',
                                 style: TextStyle(
-                                  color: const Color(0xFF101118),
+                                  color: primaryColor3,
                                   fontFamily: 'Inter',
                                   fontWeight: FontWeight.w400,
                                   fontSize: height * 0.016,
@@ -262,7 +261,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: Text(
                                   'Sign up now',
                                   style: TextStyle(
-                                    color: const Color(0xFF96006C),
+                                    color: accentColor2,
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w600,
                                     fontSize: height * 0.016,
