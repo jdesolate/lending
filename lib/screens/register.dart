@@ -261,7 +261,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 child: Text(
                                   'Sign in now',
                                   style: TextStyle(
-                                    color: accentColor2,
+                                    color: secondaryColor,
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w600,
                                     fontSize: height * 0.016,

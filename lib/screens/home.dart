@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
@@ -24,14 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _selectedIndex = index;
     });
-    if (index == 2) {
-      Future.delayed(const Duration(milliseconds: 1000), () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const LoginScreen()),
-        );
-      });
-    }
   }
 
   @override
@@ -78,9 +71,27 @@ class LoggingOut extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Logging Out....',
-      style: optionStyle,
+    return AlertDialog(
+      title: const Text('Sign out'),
+      content: SingleChildScrollView(
+        child: ListBody(
+          children: const <Widget>[
+            Text('Do you want to logout?'),
+          ],
+        ),
+      ),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () =>
+              Future.delayed(const Duration(milliseconds: 500), () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const LoginScreen()),
+            );
+          }),
+          child: const Text('Yes'),
+        ),
+      ],
     );
   }
 }

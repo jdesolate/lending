@@ -29,3 +29,15 @@ const Color secondaryColor = Color(0xFF213AD8); //blue
 const Color secondaryColor2 = Color(0xFF14213D); //blue
 const Color accentColor1 = Color(0xFFECA82E); //dandelion
 const Color accentColor2 = Color(0xFF96006C); //red violet
+
+//Mobile Settings Screen
+const String accInfoText = 'Your Profile';
+const String emailText = 'Email';
+const String currentPassText = 'Current Password';
+const String currentPassErrMsg = 'Please input current password.';
+const String newPassText = 'Confirm/New Password';
+const String newPassErrMsg = 'Please confirm password or input new password.';
+const String reauthSnackbar = 'Saving Changes. Please reauthenticate.';
+const String passWeakSnackbar = 'Password is too weak.';
+const String passUpdateSnackbar = 'Password update unsuccessful.';
+const String btnTextSave = 'Save Changes';

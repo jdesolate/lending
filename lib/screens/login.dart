@@ -225,7 +225,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               'Forgot Password?',
                               style: TextStyle(
-                                color: secondaryColor,
+                                color: secondaryColor2,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
                                 fontSize: height * 0.017,
@@ -261,7 +261,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: Text(
                                   'Sign up now',
                                   style: TextStyle(
-                                    color: accentColor2,
+                                    color: secondaryColor,
                                     fontFamily: 'Inter',
                                     fontWeight: FontWeight.w600,
                                     fontSize: height * 0.016,
