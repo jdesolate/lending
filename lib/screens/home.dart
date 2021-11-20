@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lending/constants.dart';
 import 'package:lending/screens/homepage/homepage.dart';
 import 'package:lending/screens/login.dart';
 import 'package:lending/screens/profilepage/profilepage.dart';
@@ -71,27 +72,34 @@ class LoggingOut extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: const Text('Sign out'),
-      content: SingleChildScrollView(
-        child: ListBody(
-          children: const <Widget>[
-            Text('Do you want to logout?'),
-          ],
+    return Container(
+      color: primaryColor2,
+      child: AlertDialog(
+        // title: const Text('Sign out'),
+        backgroundColor: primaryColor1,
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: const <Widget>[
+              Text('Log out of Lending?'),
+            ],
+          ),
         ),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () =>
+                Future.delayed(const Duration(milliseconds: 500), () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginScreen()),
+              );
+            }),
+            child: const Text(
+              'Yes',
+              style: TextStyle(color: accentColor1),
+            ),
+          ),
+        ],
       ),
-      actions: <Widget>[
-        TextButton(
-          onPressed: () =>
-              Future.delayed(const Duration(milliseconds: 500), () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const LoginScreen()),
-            );
-          }),
-          child: const Text('Yes'),
-        ),
-      ],
     );
   }
 }
