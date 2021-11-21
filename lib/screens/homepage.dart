@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
+import 'package:lending/screens/qualifications.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -133,12 +134,30 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ViewQualifications()),
+                      );
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
-                          Icons.history_edu_outlined,
+                        Container(
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: accentColor1.withOpacity(0.45),
+                                blurRadius: 4,
+                                offset: const Offset(
+                                    0, 4), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: const Icon(
+                            Icons.history_edu_outlined,
+                          ),
                         ),
                         SizedBox(
                           width: width * 0.035,
@@ -159,8 +178,20 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
-                          Icons.request_quote_outlined,
+                        Container(
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: accentColor1.withOpacity(0.45),
+                                blurRadius: 4,
+                                offset: const Offset(
+                                    0, 4), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: const Icon(
+                            Icons.request_quote_outlined,
+                          ),
                         ),
                         SizedBox(
                           width: width * 0.035,
@@ -181,8 +212,20 @@ class HomePage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Icon(
-                          Icons.payments_outlined,
+                        Container(
+                          decoration: BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: accentColor1.withOpacity(0.45),
+                                blurRadius: 4,
+                                offset: const Offset(
+                                    0, 4), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: const Icon(
+                            Icons.payments_outlined,
+                          ),
                         ),
                         SizedBox(
                           width: width * 0.035,

@@ -41,3 +41,6 @@ const String reauthSnackbar = 'Saving Changes. Please reauthenticate.';
 const String passWeakSnackbar = 'Password is too weak.';
 const String passUpdateSnackbar = 'Password update unsuccessful.';
 const String btnTextSave = 'Save Changes';
+
+const String contract =
+    'Privacy Policy\n\n\n\n\nTerms & Conditions\n\n\n\n\nRequirements';
