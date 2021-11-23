@@ -44,7 +44,10 @@ const String passUpdateSnackbar = 'Password update unsuccessful.';
 const String btnTextSave = 'Save Changes';
 
 const String contract =
-    'Privacy Policy\n\n\n\n\nTerms & Conditions\n\n\n\n\nRequirements';
+    'Privacy Policy\n\n\n\n\nTerms & Conditions\n\n\n\n\nRequirements\n';
+
+const String confirm =
+    'I confirm that i lorem\nispuhsmm koceankweqm,mq\n\nI confirm that I have been\nscreened for conditions that\nmay merit deferment\nor chuchucuhcuchu';
 
 const String payment =
     'Please send your payment to the Gcash account:\n\nLENDING COMPANY\n09XXXXXXXXX\n\nVerification or processing may take 1-3 business days.\n\nOnce payment is verified, it will then be reflected to your account.';
