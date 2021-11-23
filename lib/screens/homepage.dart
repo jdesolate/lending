@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
+import 'package:lending/screens/payloan.dart';
 import 'package:lending/screens/qualifications.dart';
 
 class HomePage extends StatelessWidget {
@@ -208,7 +209,13 @@ class HomePage extends StatelessWidget {
                     color: primaryColor3.withOpacity(0.8),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const PayLoan()),
+                      );
+                    },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [

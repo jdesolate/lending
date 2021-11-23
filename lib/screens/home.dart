@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
 import 'package:lending/screens/homepage.dart';
 import 'package:lending/screens/login.dart';
+import 'package:lending/screens/payloan.dart';
 import 'package:lending/screens/profilepage.dart';
 import 'package:lending/screens/qualifications.dart';
 
@@ -21,7 +22,6 @@ class _HomeScreenState extends State<HomeScreen> {
     HomePage(optionStyle: optionStyle),
     ProfilePage(optionStyle: optionStyle),
     LoggingOut(optionStyle: optionStyle),
-    ViewQualifications(),
   ];
 
   void _onItemTapped(int index) {

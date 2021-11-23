@@ -29,6 +29,7 @@ const Color secondaryColor = Color(0xFF213AD8); //blue
 const Color secondaryColor2 = Color(0xFF14213D); //blue
 const Color accentColor1 = Color(0xFFECA82E); //dandelion
 const Color accentColor2 = Color(0xFF96006C); //red violet
+const Color accentColor3 = Color(0xFF0290FF); //gcash
 
 //Mobile Settings Screen
 const String accInfoText = 'Your Profile';
@@ -44,3 +45,6 @@ const String btnTextSave = 'Save Changes';
 
 const String contract =
     'Privacy Policy\n\n\n\n\nTerms & Conditions\n\n\n\n\nRequirements';
+
+const String payment =
+    'Please send your payment to the Gcash account:\n\nLENDING COMPANY\n09XXXXXXXXX\n\nVerification or processing may take 1-3 business days.\n\nOnce payment is verified, it will then be reflected to your account.';
