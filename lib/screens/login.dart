@@ -184,7 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: primaryColor3,
+                              primary: accentColor1,
                               fixedSize: Size(
                                 width * 0.45,
                                 height * 0.060,
@@ -196,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(
                               'Login',
                               style: TextStyle(
-                                color: primaryColor1,
+                                color: primaryColor3,
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w600,
                                 fontSize: height * 0.018,

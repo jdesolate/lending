@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
 
     return SafeArea(
       child: Container(
-        decoration: BoxDecoration(color: primaryColor1.withOpacity(0.95)),
+        decoration: BoxDecoration(color: primaryColor1.withOpacity(0.98)),
         child: Padding(
           padding: EdgeInsets.symmetric(
             vertical: height * 0.25,
