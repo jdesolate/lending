@@ -59,3 +59,17 @@ const String confirm =
 
 const String payment =
     'Please send your payment to the Gcash account:\n\nLENDING COMPANY\n09XXXXXXXXX\n\nVerification or processing may take 1-3 business days.\n\nOnce payment is verified, it will then be reflected to your account.';
+
+//Home
+const String noUserSnackbar = 'No user found for that email.';
+const String wrongPassSnackbar = 'Wrong password provided for that user.';
+const String loginErrorSnackbar = 'Login Error';
+const String registerErrorSnackbar = 'Registration Error';
+const String loginText = 'Log In';
+const String registerText = 'Register Now';
+const String forgotPassText = 'Forgot Password';
+const String usedEmailText = 'Email already in use';
+const String invalidEmailText = 'Invalid email';
+
+//Main
+const String mainErrorText = 'Encountered Error!';

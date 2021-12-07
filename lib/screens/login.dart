@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
 import 'package:lending/screens/forgotpass.dart';
@@ -14,7 +15,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  // final FirebaseAuth auth = FirebaseAuth.instance;
+  final FirebaseAuth auth = FirebaseAuth.instance;
   bool _passwordVisible = false;
 
   @override
@@ -132,62 +133,55 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           ElevatedButton(
                             onPressed: () async {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const HomeScreen()),
-                              );
-                              // try {
-                              //   await auth
-                              //       .signInWithEmailAndPassword(
-                              //     email: emailController.text,
-                              //     password: passwordController.text,
-                              //   )
-                              //       .then((result) {
-                              //     User? user = auth.currentUser;
-                              //     patient.uniqueId = user!.uid;
-                              //     Navigator.of(context).pop();
-                              //     Navigator.of(context).push(
-                              //       MaterialPageRoute(
-                              //         fullscreenDialog: true,
-                              //         builder: (context) => LoadScreen(
-                              //           auth: auth,
-                              //           currentUser: user,
-                              //           device: 'mobile',
-                              //         ),
-                              //       ),
-                              //     );
-                              //   });
-                              // } on FirebaseAuthException catch (e) {
-                              //   if (e.code == 'user-not-found') {
-                              //     ScaffoldMessenger.of(context)
-                              //         .showSnackBar(
-                              //       const SnackBar(
-                              //         content: Text(
-                              //           noUserSnackbar,
-                              //         ),
-                              //       ),
-                              //     );
-                              //   } else if (e.code == 'wrong-password') {
-                              //     ScaffoldMessenger.of(context)
-                              //         .showSnackBar(
-                              //       const SnackBar(
-                              //         content: Text(
-                              //           wrongPassSnackbar,
-                              //         ),
-                              //       ),
-                              //     );
-                              //   } else {
-                              //     ScaffoldMessenger.of(context)
-                              //         .showSnackBar(
-                              //       const SnackBar(
-                              //         content: Text(
-                              //           loginErrorSnackbar,
-                              //         ),
-                              //       ),
-                              //     );
-                              //   }
-                              // }
+                              try {
+                                await auth
+                                    .signInWithEmailAndPassword(
+                                  email: emailController.text,
+                                  password: passwordController.text,
+                                )
+                                    .then((result) {
+                                  User? user = auth.currentUser;
+                                  // patient.uniqueId = user!.uid;
+                                  Navigator.of(context).pop();
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      fullscreenDialog: true,
+                                      builder: (context) => const HomeScreen(),
+                                      // LoadScreen(
+                                      //   auth: auth,
+                                      //   currentUser: user,
+                                      //   device: 'mobile',
+                                      // ),
+                                    ),
+                                  );
+                                });
+                              } on FirebaseAuthException catch (e) {
+                                if (e.code == 'user-not-found') {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text(
+                                        noUserSnackbar,
+                                      ),
+                                    ),
+                                  );
+                                } else if (e.code == 'wrong-password') {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text(
+                                        wrongPassSnackbar,
+                                      ),
+                                    ),
+                                  );
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                      content: Text(
+                                        loginErrorSnackbar,
+                                      ),
+                                    ),
+                                  );
+                                }
+                              }
                             },
                             style: ElevatedButton.styleFrom(
                               primary: primaryColor3,

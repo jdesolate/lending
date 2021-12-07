@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
 import 'package:lending/screens/homepage.dart';
@@ -90,6 +91,7 @@ class LoggingOut extends StatelessWidget {
           TextButton(
             onPressed: () =>
                 Future.delayed(const Duration(milliseconds: 500), () {
+              FirebaseAuth.instance.signOut();
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const LoginScreen()),
