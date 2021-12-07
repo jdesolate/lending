@@ -24,14 +24,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           padding: EdgeInsets.symmetric(
-            vertical: height * 0.18,
+            vertical: height * 0.15,
             horizontal: width * 0.10,
           ),
           decoration: const BoxDecoration(color: primaryColor2),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +52,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-              const Spacer(),
+              SizedBox(
+                height: height * 0.025,
+              ),
               Container(
                 height: height * 0.48,
                 width: width * 0.85,
@@ -73,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
                 child: Container(
-                  padding: const EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.all(25.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [

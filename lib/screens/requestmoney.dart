@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
+import 'package:lending/screens/requestmoney2.dart';
 
 class RequestMoney extends StatefulWidget {
   const RequestMoney({Key? key}) : super(key: key);
@@ -133,7 +134,10 @@ class _RequestMoneyState extends State<RequestMoney> {
             const Spacer(),
             ElevatedButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => InputMoney()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 primary: secondaryColor2,

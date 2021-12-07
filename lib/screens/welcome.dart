@@ -13,11 +13,11 @@ class WelcomeScreen extends StatelessWidget {
 
     return SafeArea(
       child: Container(
-        decoration: BoxDecoration(color: primaryColor1.withOpacity(0.5)),
+        decoration: BoxDecoration(color: primaryColor1.withOpacity(0.95)),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            vertical: height * 0.30,
-            horizontal: width * 0.20,
+            vertical: height * 0.25,
+            horizontal: width * 0.10,
           ),
           child: Column(
             children: [
@@ -44,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: height * 0.025,
+                    height: height * 0.035,
                   ),
                   const Text(
                     'Don’t have enough money?\nJust sign in and request for loan.\nWe have your back.',
@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: height * 0.025,
+                height: height * 0.055,
               ),
               Column(
                 children: [

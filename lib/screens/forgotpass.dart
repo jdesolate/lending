@@ -34,9 +34,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           padding: EdgeInsets.symmetric(
-            vertical: height * 0.18,
+            vertical: height * 0.15,
             horizontal: width * 0.10,
           ),
           decoration: const BoxDecoration(color: primaryColor2),

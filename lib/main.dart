@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:lending/screens/home.dart';
+// import 'package:lending/screens/home.dart';
 import 'package:lending/screens/splash.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MaterialApp(home: HomeScreen()));
-  // runApp(const MaterialApp(home: SplashScreen()));
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  // runApp(const MaterialApp(home: HomeScreen()));
+  runApp(const MaterialApp(home: SplashScreen()));
 }

@@ -24,15 +24,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           padding: EdgeInsets.symmetric(
-            vertical: height * 0.18,
+            vertical: height * 0.10,
             horizontal: width * 0.10,
           ),
           decoration: const BoxDecoration(color: primaryColor2),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -55,8 +54,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               const Spacer(),
               Container(
-                height: height * 0.48,
-                width: width * 0.85,
+                height: height * 0.55,
+                width: width * 0.95,
                 decoration: BoxDecoration(
                   color: primaryColor1,
                   borderRadius: BorderRadius.circular(25.0),

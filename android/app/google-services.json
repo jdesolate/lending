@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "381229098308",
+    "project_id": "lending-4757e",
+    "storage_bucket": "lending-4757e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381229098308:android:88fa6bc1077cb20acf6311",
+        "android_client_info": {
+          "package_name": "com.example.lending"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381229098308-a0vp3qh69rddk9hqds4ogk8pnck04ejq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjwuGIaAg_IRpkVWwqMcB_OZPF83jDcp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381229098308-a0vp3qh69rddk9hqds4ogk8pnck04ejq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

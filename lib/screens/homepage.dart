@@ -129,9 +129,9 @@ class HomePage extends StatelessWidget {
           ),
           const Spacer(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.20),
+            padding: EdgeInsets.symmetric(horizontal: width * 0.15),
             child: SizedBox(
-              height: height * 0.40,
+              height: height * 0.37,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -162,7 +162,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          width: width * 0.035,
+                          width: width * 0.038,
                         ),
                         const Text(
                           'View Qualifications',

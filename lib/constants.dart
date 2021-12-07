@@ -18,7 +18,15 @@ const TextStyle textStyle3 = TextStyle(
   color: primaryColor3,
   fontFamily: 'Inter',
   fontWeight: FontWeight.w600,
-  fontSize: 24,
+  fontSize: 20,
+  decoration: TextDecoration.none,
+);
+
+const TextStyle textStyle4 = TextStyle(
+  color: primaryColor1,
+  fontFamily: 'Inter',
+  fontWeight: FontWeight.w400,
+  fontSize: 28,
   decoration: TextDecoration.none,
 );
 

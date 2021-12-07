@@ -40,6 +40,7 @@ class _ProfilePageState extends State<ProfilePage> {
         resizeToAvoidBottomInset: true,
         backgroundColor: primaryColor2,
         body: Container(
+          padding: const EdgeInsets.only(top: 15.0),
           alignment: Alignment.center,
           child: Form(
             key: _formKey,
@@ -157,7 +158,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       ],
                     ),
                   ),
-                  SizedBox(height: height * 0.05),
+                  SizedBox(height: height * 0.015),
                   Align(
                     alignment: Alignment.center,
                     child: Container(
