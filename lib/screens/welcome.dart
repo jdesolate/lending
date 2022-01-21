@@ -73,6 +73,7 @@ class WelcomeScreen extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     primary: accentColor1,
+                    elevation: 3,
                     fixedSize: Size(
                       width * 0.65,
                       height * 0.060,
@@ -106,7 +107,12 @@ class WelcomeScreen extends StatelessWidget {
                     primary: primaryColor1,
                     onPrimary: accentColor2,
                     onSurface: accentColor2,
-                    shadowColor: accentColor2,
+
+                    side: const BorderSide(
+                      width: 1,
+                      color: accentColor2,
+                    ), //border width and color
+                    elevation: 3, //elevation of button
                     fixedSize: Size(
                       width * 0.65,
                       height * 0.060,
