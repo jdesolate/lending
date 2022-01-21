@@ -7,5 +7,8 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   // runApp(const MaterialApp(home: HomeScreen()));
-  runApp(const MaterialApp(home: SplashScreen()));
+  runApp(MaterialApp(
+      home: const SplashScreen(),
+      theme: ThemeData(fontFamily: 'Inter'),
+      debugShowCheckedModeBanner: false));
 }

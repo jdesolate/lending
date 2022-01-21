@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lending/constants.dart';
 import 'package:lending/screens/login.dart';
@@ -11,115 +12,123 @@ class WelcomeScreen extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
 
-    return SafeArea(
-      child: Container(
-        decoration: BoxDecoration(color: primaryColor1.withOpacity(0.98)),
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: height * 0.25,
-            horizontal: width * 0.10,
-          ),
-          child: Column(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'Welcome\nto Lending',
+    return Container(
+      decoration: const BoxDecoration(color: primaryColor1),
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          vertical: height * 0.25,
+          horizontal: width * 0.08,
+        ),
+        child: Column(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        // Note: Styles for TextSpans must be explicitly defined.
+                        // Child text spans will inherit styles from parent
                         style: textStyle,
-                      ),
-                      Spacer(),
-                      CircleAvatar(
-                        radius: 45,
-                        backgroundColor: Colors.transparent,
-                        backgroundImage: AssetImage(
-                          'images/loan.png',
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: height * 0.035,
-                  ),
-                  const Text(
-                    'Don’t have enough money?\nJust sign in and request for loan.\nWe have your back.',
-                    style: textStyle2,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: height * 0.055,
-              ),
-              Column(
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginScreen()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: primaryColor3,
-                      fixedSize: Size(
-                        width * 0.65,
-                        height * 0.060,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
+                        children: <TextSpan>[
+                          const TextSpan(text: 'Welcome\nto '),
+                          TextSpan(text: appTitle, style: textStyleTitle),
+                        ],
                       ),
                     ),
-                    child: Text(
-                      'Log In',
-                      style: TextStyle(
-                        color: primaryColor1,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w300,
-                        fontSize: height * 0.022,
-                        decoration: TextDecoration.none,
+                    const Spacer(),
+                    const CircleAvatar(
+                      radius: 45,
+                      backgroundColor: Colors.transparent,
+                      backgroundImage: AssetImage(
+                        'images/loan.png',
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: height * 0.030,
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const RegisterScreen()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: accentColor1,
-                      fixedSize: Size(
-                        width * 0.65,
-                        height * 0.060,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
-                      ),
+                  ],
+                ),
+                SizedBox(
+                  height: height * 0.045,
+                ),
+                const Text(
+                  'Don’t have enough money?\nJust sign in and request for loan.\nWe have your back.',
+                  style: textStyle2,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: height * 0.055,
+            ),
+            Column(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginScreen()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: accentColor1,
+                    fixedSize: Size(
+                      width * 0.65,
+                      height * 0.060,
                     ),
-                    child: Text(
-                      'Sign Up',
-                      style: TextStyle(
-                        color: primaryColor3,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.w400,
-                        fontSize: height * 0.022,
-                        decoration: TextDecoration.none,
-                      ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40.0),
                     ),
                   ),
-                ],
-              ),
-            ],
-          ),
+                  child: Text(
+                    'Log In',
+                    style: TextStyle(
+                      color: primaryColor3,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w300,
+                      fontSize: height * 0.022,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: height * 0.030,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const RegisterScreen()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: primaryColor1,
+                    onPrimary: accentColor2,
+                    onSurface: accentColor2,
+                    shadowColor: accentColor2,
+                    fixedSize: Size(
+                      width * 0.65,
+                      height * 0.060,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40.0),
+                    ),
+                  ),
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      color: accentColor2,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w400,
+                      fontSize: height * 0.022,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

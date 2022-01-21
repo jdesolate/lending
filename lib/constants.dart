@@ -1,22 +1,31 @@
 import 'package:flutter/material.dart';
 
+final Shader linearGradient = const LinearGradient(
+  colors: <Color>[
+    Color(0xffECA82E),
+    Color(0xff96006C),
+  ],
+).createShader(const Rect.fromLTWH(130.0, 150.0, 150.0, 50.0));
+
+TextStyle textStyleTitle = TextStyle(
+    fontSize: 34,
+    fontWeight: FontWeight.bold,
+    foreground: Paint()..shader = linearGradient);
+
 const TextStyle textStyle = TextStyle(
   color: primaryColor3,
-  fontFamily: 'Inter',
-  fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.w600,
   fontSize: 34,
   decoration: TextDecoration.none,
 );
 const TextStyle textStyle2 = TextStyle(
   color: primaryColor3,
-  fontFamily: 'Inter',
   fontWeight: FontWeight.normal,
-  fontSize: 16,
+  fontSize: 18,
   decoration: TextDecoration.none,
 );
 const TextStyle textStyle3 = TextStyle(
   color: primaryColor3,
-  fontFamily: 'Inter',
   fontWeight: FontWeight.w600,
   fontSize: 20,
   decoration: TextDecoration.none,
@@ -24,13 +33,12 @@ const TextStyle textStyle3 = TextStyle(
 
 const TextStyle textStyle4 = TextStyle(
   color: primaryColor1,
-  fontFamily: 'Inter',
   fontWeight: FontWeight.w400,
   fontSize: 28,
   decoration: TextDecoration.none,
 );
 
-const Color primaryColor1 = Color(0xFFFDFBF7); //white
+const Color primaryColor1 = Color(0xFFFFF8E9); //white
 const Color primaryColor2 = Color(0xFFF6E6CE); //flesh
 const Color primaryColor3 = Color(0xFF101118); //black
 const Color secondaryColor = Color(0xFF213AD8); //blue
@@ -38,6 +46,10 @@ const Color secondaryColor2 = Color(0xFF14213D); //blue
 const Color accentColor1 = Color(0xFFECA82E); //dandelion
 const Color accentColor2 = Color(0xFF96006C); //red violet
 const Color accentColor3 = Color(0xFF0290FF); //gcash
+
+//Splash screen
+const String appTitle = "TingBits";
+const String appMotto = "Borrow money simply.";
 
 //Mobile Settings Screen
 const String accInfoText = 'Your Profile';
