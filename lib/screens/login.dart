@@ -5,6 +5,7 @@ import 'package:lending/screens/forgotpass.dart';
 import 'package:lending/screens/home.dart';
 import 'package:lending/screens/register.dart';
 import 'package:lending/widgets/custom_page_route.dart';
+import 'package:lending/widgets/custom_text_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(
-                height: height * 0.025,
+                height: height * 0.055,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -56,10 +57,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: height * 0.015,
                       ),
+                      CustomTextField(
+                          type: 'Email', typeController: emailController),
+                      SizedBox(
+                        height: height * 0.045,
+                      ),
                       Container(
-                        height: 80,
+                        height: 70,
                         decoration: BoxDecoration(
-                            color: primaryColor1,
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10.0)),
                         child: Stack(
                           children: [
@@ -83,56 +89,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               margin:
                                   const EdgeInsets.symmetric(horizontal: 10),
                               child: TextField(
-                                controller: emailController,
-                                decoration: const InputDecoration(
-                                  border: InputBorder.none,
-                                  focusedBorder: InputBorder.none,
-                                  enabledBorder: InputBorder.none,
-                                  errorBorder: InputBorder.none,
-                                  disabledBorder: InputBorder.none,
-                                  contentPadding: EdgeInsets.only(
-                                      left: 10, bottom: 11, top: 11, right: 15),
-                                  icon: Icon(
-                                    Icons.person,
-                                    color: primaryColor3,
-                                  ),
-                                  hintText: 'Email',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: height * 0.045,
-                      ),
-                      Container(
-                        height: 80,
-                        decoration: BoxDecoration(
-                            color: primaryColor1,
-                            borderRadius: BorderRadius.circular(10.0)),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                alignment: Alignment.bottomCenter,
-                                height: 8,
-                                width: double.maxFinite,
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(10),
-                                    bottomRight: Radius.circular(10),
-                                  ),
-                                  color: accentColor1,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              alignment: Alignment.center,
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 10),
-                              child: TextFormField(
                                 keyboardType: TextInputType.text,
                                 controller: passwordController,
                                 obscureText: !_passwordVisible,
