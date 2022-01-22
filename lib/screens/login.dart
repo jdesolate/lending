@@ -1,9 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:lending/constants.dart';
+import 'package:lending/widgets/constants.dart';
 import 'package:lending/screens/forgotpass.dart';
 import 'package:lending/screens/home.dart';
 import 'package:lending/screens/register.dart';
+import 'package:lending/widgets/custom_page_route.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        decoration: const BoxDecoration(color: primaryColor2),
+        decoration: const BoxDecoration(color: primaryColor1),
         child: Container(
           margin: EdgeInsets.symmetric(
             horizontal: width * 0.05,
@@ -292,9 +293,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterScreen()),
+                                CustomPageRoute(child: const RegisterScreen()),
                               );
                             },
                             child: Text(

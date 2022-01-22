@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lending/constants.dart';
+import 'package:lending/widgets/constants.dart';
 import 'package:lending/screens/login.dart';
 import 'package:lending/screens/register.dart';
+import 'package:lending/widgets/custom_page_route.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -67,9 +68,7 @@ class WelcomeScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
+                        context, CustomPageRoute(child: const LoginScreen()));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: accentColor1,
@@ -98,10 +97,8 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const RegisterScreen()));
+                    Navigator.pushReplacement(context,
+                        CustomPageRoute(child: const RegisterScreen()));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: primaryColor1,

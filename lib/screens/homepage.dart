@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lending/constants.dart';
+import 'package:lending/widgets/constants.dart';
 import 'package:lending/screens/payloan.dart';
 import 'package:lending/screens/qualifications.dart';
 import 'package:lending/screens/requestmoney.dart';

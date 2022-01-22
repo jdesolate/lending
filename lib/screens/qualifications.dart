@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lending/constants.dart';
+import 'package:lending/widgets/constants.dart';
 
 class ViewQualifications extends StatelessWidget {
   const ViewQualifications({Key? key}) : super(key: key);

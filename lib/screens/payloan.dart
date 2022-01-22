@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lending/constants.dart';
+import 'package:lending/widgets/constants.dart';
 
 class PayLoan extends StatelessWidget {
   const PayLoan({Key? key}) : super(key: key);

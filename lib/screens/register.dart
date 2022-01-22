@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:lending/constants.dart';
+import 'package:lending/widgets/constants.dart';
 import 'package:lending/screens/login.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -32,7 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             vertical: height * 0.10,
             horizontal: width * 0.10,
           ),
-          decoration: const BoxDecoration(color: primaryColor2),
+          decoration: const BoxDecoration(color: primaryColor1),
           child: Column(
             children: [
               Row(

@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:lending/constants.dart';
+import 'package:lending/widgets/constants.dart';
 import 'package:lending/screens/homepage.dart';
 import 'package:lending/screens/login.dart';
 import 'package:lending/screens/payloan.dart';
