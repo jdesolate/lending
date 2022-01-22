@@ -293,7 +293,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                CustomPageRoute(child: const RegisterScreen()),
+                                CustomPageRoute(
+                                    direction: toLeft,
+                                    child: const RegisterScreen()),
                               );
                             },
                             child: Text(

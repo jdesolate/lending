@@ -68,7 +68,9 @@ class WelcomeScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(
-                        context, CustomPageRoute(child: const LoginScreen()));
+                        context,
+                        CustomPageRoute(
+                            direction: toLeft, child: const LoginScreen()));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: accentColor1,
@@ -97,8 +99,10 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushReplacement(context,
-                        CustomPageRoute(child: const RegisterScreen()));
+                    Navigator.pushReplacement(
+                        context,
+                        CustomPageRoute(
+                            direction: toLeft, child: const RegisterScreen()));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: primaryColor1,

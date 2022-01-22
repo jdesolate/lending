@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const String toLeft = 'left';
+const String toRight = 'right';
 final Shader linearGradient = const LinearGradient(
   colors: <Color>[
     Color(0xffECA82E),

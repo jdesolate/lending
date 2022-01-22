@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 class CustomPageRoute extends PageRouteBuilder {
   final Widget child;
+  final String direction;
 
   CustomPageRoute({
     required this.child,
+    required this.direction,
   }) : super(
-          transitionDuration: const Duration(milliseconds: 750),
+          transitionDuration: const Duration(milliseconds: 350),
           pageBuilder: (context, animation, secondaryAnimation) => child,
         );
 
@@ -19,7 +21,8 @@ class CustomPageRoute extends PageRouteBuilder {
   ) =>
       SlideTransition(
         position: Tween<Offset>(
-          begin: const Offset(1, 0),
+          begin:
+              (direction == 'left') ? const Offset(1, 0) : const Offset(-1, 0),
           end: Offset.zero,
         ).animate(animation),
         child: child,
