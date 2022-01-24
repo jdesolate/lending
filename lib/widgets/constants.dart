@@ -14,6 +14,11 @@ TextStyle textStyleTitle = TextStyle(
     fontWeight: FontWeight.bold,
     foreground: Paint()..shader = linearGradient);
 
+TextStyle textStyleTitle2 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    foreground: Paint()..shader = linearGradient);
+
 const TextStyle textStyle = TextStyle(
   color: primaryColor3,
   fontWeight: FontWeight.w600,
@@ -48,7 +53,13 @@ const Color secondaryColor2 = Color(0xFF14213D); //blue
 const Color accentColor1 = Color(0xFFECA82E); //dandelion
 const Color accentColor2 = Color(0xFF96006C); //red violet
 const Color accentColor3 = Color(0xFF0290FF); //gcash
-
+const Color circleColor1 = Color(0xFFFFCC78); //circleColor1
+Color circleColor2 = const Color(0xFF111111).withOpacity(0.85); //circleColor2
+List<Color> homeGradient = [
+  const Color(0xFFF0D29D),
+  const Color(0xFFFBCF7F),
+  Colors.white,
+];
 //Splash screen
 const String appTitle = "TingBits";
 const String appMotto = "Borrow money simply.";

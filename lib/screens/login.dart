@@ -7,6 +7,8 @@ import 'package:lending/screens/register.dart';
 import 'package:lending/widgets/custom_page_route.dart';
 import 'package:lending/widgets/custom_text_field.dart';
 
+import 'onboarding.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -146,7 +148,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   fullscreenDialog: true,
-                                  builder: (context) => const HomeScreen(),
+                                  builder: (context) => const Onboarding(),
                                   // LoadScreen(
                                   //   auth: auth,
                                   //   currentUser: user,
