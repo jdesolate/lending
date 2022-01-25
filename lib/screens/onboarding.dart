@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lending/widgets/onboarding/amount_feature.dart';
 import 'package:lending/widgets/constants.dart';
+import 'package:lending/widgets/onboarding/ob_fourth_block.dart';
+import 'package:lending/widgets/onboarding/ob_second_block.dart';
+import 'package:lending/widgets/onboarding/ob_third_block.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({Key? key}) : super(key: key);
@@ -72,26 +76,36 @@ class Onboarding extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
+                children: const [
+                  Padding(
                     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                     child: Text('Hey User!', style: textStyle),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 10,
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.symmetric(vertical: 0, horizontal: 15),
-                    child:
-                        Text('You\' looking great today.', style: textStyle2),
+                    child: Text('You\' looking good today.', style: textStyle2),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 30,
                   ),
-                  Container(
-                    height: 220,
-                    width: double.maxFinite,
-                    color: Colors.white,
+                  AmountFeature(),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  OB2ndBlock(),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  OB3rdBlock(),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: OB4thBlock(),
                   ),
                 ],
               ),

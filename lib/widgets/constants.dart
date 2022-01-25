@@ -45,6 +45,34 @@ const TextStyle textStyle4 = TextStyle(
   decoration: TextDecoration.none,
 );
 
+const TextStyle textStyle5 = TextStyle(
+  color: primaryColor3,
+  fontWeight: FontWeight.w600,
+  fontSize: 16,
+  decoration: TextDecoration.none,
+);
+
+const TextStyle textStyle6 = TextStyle(
+  color: primaryColor3,
+  fontWeight: FontWeight.w400,
+  fontSize: 14,
+  decoration: TextDecoration.none,
+);
+
+const TextStyle textStyle7 = TextStyle(
+  color: primaryColor1,
+  fontWeight: FontWeight.w600,
+  fontSize: 16,
+  decoration: TextDecoration.none,
+);
+
+const TextStyle textStyle8 = TextStyle(
+  color: primaryColor1,
+  fontWeight: FontWeight.w400,
+  fontSize: 14,
+  decoration: TextDecoration.none,
+);
+
 const Color primaryColor1 = Color(0xFFFFF8E9); //white
 const Color primaryColor2 = Color(0xFFF6E6CE); //flesh
 const Color primaryColor3 = Color(0xFF101118); //black
@@ -54,11 +82,16 @@ const Color accentColor1 = Color(0xFFECA82E); //dandelion
 const Color accentColor2 = Color(0xFF96006C); //red violet
 const Color accentColor3 = Color(0xFF0290FF); //gcash
 const Color circleColor1 = Color(0xFFFFCC78); //circleColor1
-Color circleColor2 = const Color(0xFF111111).withOpacity(0.85); //circleColor2
+Color circleColor2 = const Color(0xFF111111).withOpacity(0.75); //circleColor2
 List<Color> homeGradient = [
   const Color(0xFFF0D29D),
   const Color(0xFFFBCF7F),
   Colors.white,
+];
+
+List<Color> fourthBlockGradient = [
+  const Color(0xFF3040A9),
+  const Color(0xFF001283),
 ];
 //Splash screen
 const String appTitle = "TingBits";
