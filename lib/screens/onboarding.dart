@@ -1,117 +1,69 @@
 import 'package:flutter/material.dart';
-import 'package:lending/widgets/onboarding/amount_feature.dart';
+import 'package:lending/screens/activities.dart';
+import 'package:lending/screens/home_revamp.dart';
+import 'package:lending/screens/notifications.dart';
 import 'package:lending/widgets/constants.dart';
-import 'package:lending/widgets/onboarding/ob_fourth_block.dart';
-import 'package:lending/widgets/onboarding/ob_second_block.dart';
-import 'package:lending/widgets/onboarding/ob_third_block.dart';
+import 'package:lending/widgets/drawer.dart';
 
-class Onboarding extends StatelessWidget {
+class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
+  State<Onboarding> createState() => _OnboardingState();
+}
 
+class _OnboardingState extends State<Onboarding> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  static const List<Widget> _widgetOptions = <Widget>[
+    Home(),
+    Activities(),
+    Notifications(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: primaryColor2,
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.menu,
-            color: primaryColor3,
-          ),
-        ),
+        backgroundColor: primaryColor1,
+        iconTheme: const IconThemeData(color: primaryColor3),
         title: Text(
           appTitle,
           style: textStyleTitle2,
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications_none_outlined,
-              color: primaryColor3,
+      ),
+      drawer: const SideDrawer(),
+      body: _widgetOptions.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.receipt_outlined,
             ),
+            label: 'Activities',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.notifications_none_outlined,
+            ),
+            label: 'Notifications',
           ),
         ],
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: homeGradient,
-          )),
-          height: height * 1.5,
-          width: double.maxFinite,
-          child: Stack(
-            children: [
-              Positioned(
-                top: -50,
-                right: -100,
-                child: Container(
-                  width: 850,
-                  height: 800,
-                  decoration: const BoxDecoration(
-                    color: circleColor1,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: -100,
-                left: 15,
-                child: Container(
-                  width: 850,
-                  height: 800,
-                  decoration: BoxDecoration(
-                    color: circleColor2,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                    child: Text('Hey User!', style: textStyle),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 0, horizontal: 15),
-                    child: Text('You\' looking good today.', style: textStyle2),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  AmountFeature(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  OB2ndBlock(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  OB3rdBlock(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: OB4thBlock(),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
       ),
     );
   }

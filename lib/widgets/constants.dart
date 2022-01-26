@@ -93,6 +93,14 @@ List<Color> fourthBlockGradient = [
   const Color(0xFF3040A9),
   const Color(0xFF001283),
 ];
+
+List<Color> hoverGradient = [
+  accentColor1,
+  const Color(0xFFFF8C4C),
+  const Color(0xFFFF6060),
+  Colors.white,
+];
+
 //Splash screen
 const String appTitle = "TingBits";
 const String appMotto = "Borrow money simply.";
