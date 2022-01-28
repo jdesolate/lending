@@ -21,9 +21,9 @@ class _OnboardingState extends State<Onboarding> {
     });
   }
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Home(),
-    Activities(),
+  static final List<Widget> _widgetOptions = <Widget>[
+    const Home(),
+    const Activities(),
     Notifications(),
   ];
 

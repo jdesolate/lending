@@ -139,3 +139,89 @@ const String invalidEmailText = 'Invalid email';
 
 //Main
 const String mainErrorText = 'Encountered Error!';
+
+//notifications
+List<Widget> notifs = [
+  Container(
+    height: 170,
+    width: double.maxFinite,
+    padding: const EdgeInsets.all(20.0),
+    decoration: const BoxDecoration(
+      color: Colors.white,
+      border: Border(
+        bottom: BorderSide(
+          width: 1.0,
+          color: Color(0xFFDADADA),
+        ),
+      ),
+    ),
+    child: Column(
+      children: [
+        Row(
+          children: const [
+            Icon(Icons.receipt),
+            SizedBox(
+              width: 15,
+            ),
+            Text('Loan Approved', style: textStyle5),
+          ],
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const Padding(
+          padding: EdgeInsets.only(left: 35.0),
+          child: Text(
+            'We’re happy to inform you that we have approved your loan request. Please check your GCash within 1-2 days. Thank you.',
+            style: TextStyle(
+              overflow: TextOverflow.ellipsis,
+            ),
+            maxLines: 4,
+            textAlign: TextAlign.justify,
+          ),
+        ),
+      ],
+    ),
+  ),
+  Container(
+    height: 170,
+    width: double.maxFinite,
+    padding: const EdgeInsets.all(20.0),
+    decoration: const BoxDecoration(
+      color: Colors.white,
+      border: Border(
+        bottom: BorderSide(
+          width: 1.0,
+          color: Color(0xFFDADADA),
+        ),
+      ),
+    ),
+    child: Column(
+      children: [
+        Row(
+          children: const [
+            Icon(Icons.receipt),
+            SizedBox(
+              width: 15,
+            ),
+            Text('Loan Request', style: textStyle5),
+          ],
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const Padding(
+          padding: EdgeInsets.only(left: 35.0),
+          child: Text(
+            'We’d like to inform you that we will review your loan request. During this time, we will process and check the details for your request. To avoid any inconvenience, schedule ',
+            style: TextStyle(
+              overflow: TextOverflow.ellipsis,
+            ),
+            maxLines: 4,
+            textAlign: TextAlign.justify,
+          ),
+        ),
+      ],
+    ),
+  ),
+];
