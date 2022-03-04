@@ -9,8 +9,8 @@ Future main() async {
   await Firebase.initializeApp();
   // runApp(const MaterialApp(home: HomeScreen()));
   runApp(MaterialApp(
-      // home: const Onboarding(),
-      home: const SplashScreen(),
+      home: const Onboarding(),
+      // home: const SplashScreen(),
       theme: ThemeData(fontFamily: 'Inter'),
       debugShowCheckedModeBanner: false));
 }

@@ -83,6 +83,8 @@ const Color accentColor2 = Color(0xFF96006C); //red violet
 const Color accentColor3 = Color(0xFF0290FF); //gcash
 const Color circleColor1 = Color(0xFFFFCC78); //circleColor1
 Color circleColor2 = const Color(0xFF111111).withOpacity(0.75); //circleColor2
+Color lineColor1 = const Color(0xFFC8C7CC).withOpacity(0.75); //circleColor2
+
 List<Color> homeGradient = [
   const Color(0xFFF0D29D),
   const Color(0xFFFBCF7F),

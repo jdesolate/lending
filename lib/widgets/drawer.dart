@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lending/screens/profilepage.dart';
 import 'package:lending/widgets/constants.dart';
 
 class SideDrawer extends StatelessWidget {
@@ -126,7 +127,12 @@ class SideDrawer extends StatelessWidget {
                 title: const Text('Profile', style: textStyle2),
                 hoverColor: accentColor1,
                 focusColor: accentColor1,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfilePage()));
+                },
               ),
               const SizedBox(
                 height: 10,

@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(optionStyle: optionStyle),
-    ProfilePage(optionStyle: optionStyle),
+    ProfilePage(),
     LoggingOut(optionStyle: optionStyle),
   ];
 
