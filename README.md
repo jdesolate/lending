@@ -1,4 +1,4 @@
-# lending
+# tingbits
 
 A Mobile Lending Application project using Flutter.
 
